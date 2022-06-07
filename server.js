@@ -1,12 +1,17 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 const cors = require("cors");
-const { path } = require("express/lib/application");
+//const { path } = require("express/lib/application");
 
 const PORT = 8000;
 const IMAGES = path.join(__dirname, "static", "images");
+const JAVASCRIPT = path.join(__dirname, "js");
+const CSS = path.join(__dirname, "css");
 
 app.use(cors());
+app.use(express.static("css"));
+app.use(express.static("js"));
 
 let characters = {
   Loid: {
