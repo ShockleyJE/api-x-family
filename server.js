@@ -58,9 +58,9 @@ app.get("/", (request, response) => {
 });
 
 app.get("/api/characters/:name", (request, response) => {
-  const id = parseInt(request.params.name);
-  if (characters[id]) {
-    response.json(characters[id]);
+  const name = String(request.params.name);
+  if (characters[name]) {
+    response.json(characters[name]);
   } else {
     response.json(characters["unknown"]);
   }
