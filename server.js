@@ -33,7 +33,7 @@ let characters = {
     age: "unknown",
     occupation: "Spy",
     alias: "Test Subject 007",
-    relationships: ["Loid Forger", "Anya Forger"],
+    relationships: ["Loid Forger", "Yor Forger"],
   },
   yuri: {
     name: "Anya Forger",
