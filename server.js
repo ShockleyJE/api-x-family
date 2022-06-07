@@ -14,28 +14,28 @@ app.use(express.static("css"));
 app.use(express.static("js"));
 
 let characters = {
-  Loid: {
+  loid: {
     name: "Loid Forger",
     age: "unknown",
     occupation: "Spy",
     alias: "Twilight",
     relationships: ["Yor Forger", "Anya Forger"],
   },
-  Yor: {
+  yor: {
     name: "Yor Forger",
     age: 27,
     occupation: "Spy",
     alias: "Thorn Princess",
     relationships: ["Loid Forger", "Anya Forger", "Yuri Briar"],
   },
-  Anya: {
+  anya: {
     name: "Anya Forger",
     age: "unknown",
     occupation: "Spy",
     alias: "Test Subject 007",
     relationships: ["Loid Forger", "Anya Forger"],
   },
-  Yuri: {
+  yuri: {
     name: "Anya Forger",
     age: "unknown",
     occupation: "Spy",
