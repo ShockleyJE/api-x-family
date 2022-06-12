@@ -2,12 +2,24 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const cors = require("cors");
-//const { path } = require("express/lib/application");
+const { MongoClient, ServerApiVersion } = require("mongodb");
+require("dotenv").config({ path: ".env" });
 
 const PORT = 8000;
 const IMAGES = path.join(__dirname, "static", "images");
 const JAVASCRIPT = path.join(__dirname, "js");
 const CSS = path.join(__dirname, "css");
+const MONGO_URI =
+  "mongodb+srv://node-backend-rw:qUCVSjFV3eHimcE@cluster0.3i4fd.mongodb.net/?retryWrites=true&w=majority";
+
+// Example mongo code
+
+//const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+//client.connect(err => {
+//  const collection = client.db("test").collection("devices");
+//  // perform actions on the collection object
+//  client.close();
+//});
 
 app.use(cors());
 app.use(express.static("css"));
@@ -24,21 +36,21 @@ let characters = {
   yor: {
     name: "Yor Forger",
     age: 27,
-    occupation: "Spy",
+    occupation: "Public servant",
     alias: "Thorn Princess",
     relationships: ["Loid Forger", "Anya Forger", "Yuri Briar"],
   },
   anya: {
     name: "Anya Forger",
     age: "unknown",
-    occupation: "Spy",
+    occupation: "Student",
     alias: "Test Subject 007",
     relationships: ["Loid Forger", "Yor Forger"],
   },
   yuri: {
-    name: "Anya Forger",
+    name: "Yuri",
     age: "unknown",
-    occupation: "Spy",
+    occupation: "",
     alias: "Thorn Princess",
     relationships: ["Loid Forger", "Anya Forger", "Yuri Briar"],
     image: "anya.bmp",
@@ -64,6 +76,11 @@ app.get("/api/characters/:name", (request, response) => {
   } else {
     response.json(characters["unknown"]);
   }
+});
+
+app.post("/api/characters/", (request, response) => {
+  const name = String(request.params.name);
+  console.log(request);
 });
 
 app.listen(process.env.PORT || PORT, () => {

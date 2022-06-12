@@ -1,0 +1,42 @@
+{
+  "loid": {
+    "name": "Loid Forger",
+    "age": "unknown",
+    "occupation": "Spy",
+    "alias": "Twilight",
+    "relationships": ["Yor Forger", "Anya Forger"],
+    "image": "loid.bmp"
+  },
+  "yor": {
+    "name": "Yor Forger",
+    "age": 27,
+    "occupation": "Public servant",
+    "alias": "Thorn Princess",
+    "relationships": ["Loid Forger", "Anya Forger", "Yuri Briar"],
+    "image": "yor.bmp"
+  },
+  "anya": {
+    "name": "Anya Forger",
+    "age": "unknown",
+    "occupation": "Student",
+    "alias": "Test Subject 007",
+    "relationships": ["Loid Forger", "Yor Forger"],
+    "image": "anya.bmp"
+  },
+  "yuri": {
+    "name": "Yuri",
+    "age": "unknown",
+    "occupation": "",
+    "alias": "Thorn Princess",
+    "relationships": ["Loid Forger", "Anya Forger", "Yuri Briar"],
+    "image": "yuri.bmp"
+  },
+  "unknown": {
+    "name": "unknown",
+    "age": "unknown",
+    "occupation": "unknown",
+    "alias": "unknown",
+    "relationships": ["unknown"],
+    "image": "unknown"
+  }
+}
